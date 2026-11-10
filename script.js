@@ -517,3 +517,12 @@ var CONFIG = {
     }
   })();
 })();
+
+/*
+ * Personal Portfolio Website Template
+ * Copyright (C) 2026 [https://github.com/mshkh-dev]
+ * 
+ * Licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+ * If you fork or modify this code for your own website, your repository 
+ * must remain open-source under AGPL-3.0 with attribution retained.
+ */

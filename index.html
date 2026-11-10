@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moeen · Data engineering, DataOps and ML</title>
+<meta name="description" content="A computer engineering student heading towards data engineering, DataOps and machine learning. Rust and ML hobbyist who writes a blog and uses Arch, btw.">
+<meta name="theme-color" content="#282828">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moeen · Data engineering, DataOps and ML">
+<meta property="og:description" content="A computer engineering student who wants to know what the machine is really doing.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/LiberationSerif-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/LiberationSerif-Italic.woff" as="font" type="font/woff" crossorigin>
+<script>
+  /* Set theme and the .js flag before first paint to avoid a flash. */
+  (function () {
+    var d = document.documentElement;
+    d.classList.add("js");
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") {
+      t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+    d.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#story">Skip to content</a>
+
+<div class="blobs" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<!-- Nav pill: small until you hover or focus it, then it opens up -->
+<header class="dock">
+  <div class="dock-in" id="dock">
+    <button class="dock-mark" id="dockBtn" type="button" aria-expanded="false" aria-controls="dockNav" aria-label="Menu">
+      <span class="dock-m" aria-hidden="true">M</span>
+      <span class="dock-here"><span id="here">Hello</span></span>
+    </button>
+    <div class="dock-wrap">
+      <nav id="dockNav" aria-label="Primary">
+        <ul>
+          <li style="--k:0"><a href="#story">Story</a></li>
+          <li style="--k:1"><a href="#study">Studies</a></li>
+          <li style="--k:2"><a href="#built">Built</a></li>
+          <li style="--k:3"><a href="#next">Next</a></li>
+          <li style="--k:4"><a href="#notes">Writing</a></li>
+          <li style="--k:5"><a href="#hello">Hello</a></li>
+          <li style="--k:6"><a href="#short">TL;DR</a></li>
+          <li style="--k:7">
+            <button class="theme" id="theme" type="button" aria-label="Switch to light theme">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+              <span id="theme-label">Light</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <span class="dock-bar" aria-hidden="true"></span>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Opening -->
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="wrap hero-in" id="heroIn">
+      <p class="hello" data-anim>Hello, I&rsquo;m</p>
+      <h1 class="name" id="heroName" aria-label="Moeen">
+        <span class="ch" aria-hidden="true" style="--i:0">M</span><span class="ch" aria-hidden="true" style="--i:1">o</span><span class="ch" aria-hidden="true" style="--i:2">e</span><span class="ch" aria-hidden="true" style="--i:3">e</span><span class="ch" aria-hidden="true" style="--i:4">n</span>
+      </h1>
+      <div class="hero-row">
+        <p class="hero-line" data-anim style="--d:4">I&rsquo;m a computer engineering student who wants to know what the machine is really doing. These days I keep coming back to <span class="type-wrap"><span id="type">Rust</span><span class="caret" aria-hidden="true"></span></span></p>
+        <a class="rush" href="#short" data-anim style="--d:6">In a hurry? Jump to the short version and r&eacute;sum&eacute; <span aria-hidden="true">&darr;</span></a>
+      </div>
+      <a class="cue" href="#story" aria-label="Scroll to the story"><span class="cue-line" aria-hidden="true"></span><span>scroll</span></a>
+    </div>
+  </section>
+
+  <!-- How it started -->
+  <section class="chap" id="story" aria-labelledby="story-h">
+    <div class="wrap narrow">
+      <p class="kicker" data-anim>How it started</p>
+      <h2 class="head" id="story-h" data-anim="rise">When something works, I want to know why.</h2>
+      <p class="big words">That habit is how I ended up on Arch, writing Rust, and poking at the Linux kernel through eBPF. Lately it has pulled me towards data: how it moves, how it breaks, and how a machine can learn something useful from it.</p>
+      <p class="small" data-anim>I&rsquo;m in my third year of computer engineering. I write about what I build, and about what breaks along the way.</p>
+    </div>
+  </section>
+
+  <!-- Where I studied. To add years or a branch, edit the text in the two cards below. -->
+  <section class="chap" id="study" aria-labelledby="study-h">
+    <div class="wrap">
+      <p class="kicker" data-anim>Where I studied</p>
+      <h2 class="head wide" id="study-h" data-anim="rise">A diploma first, then a degree.</h2>
+      <p class="lead" data-anim>Both in computer engineering: a diploma first, then a B.E. Everything on this page is what I&rsquo;ve picked up along the way, in class and out of it.</p>
+
+      <ol class="timeline" id="timeline">
+        <li class="tl-item" data-anim="right">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="when">Where it began</p>
+            <h3>Diploma in Computer Engineering</h3>
+            <p class="where">Marathwada Mitramandal&rsquo;s Polytechnic</p>
+            <p class="blurb">The fundamentals that everything since has been built on.</p>
+          </div>
+        </li>
+        <li class="tl-item now" data-anim="right">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <div class="tl-card">
+            <p class="when">Where I am now</p>
+            <h3>B.E. in Computer Engineering</h3>
+            <p class="where">DY Patil College of Engineering and Innovation</p>
+            <p class="blurb">Still in progress, and pointed at data engineering, DataOps and machine learning.</p>
+            <span class="note">Third year</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- What I've been building -->
+  <section class="chap" id="built" aria-labelledby="built-h">
+    <div class="wrap">
+      <p class="kicker" data-anim>What I&rsquo;ve been building</p>
+      <h2 class="head wide" id="built-h" data-anim="rise">Three things I made to find out how they work.</h2>
+
+      <article class="scene">
+        <div class="scene-text" data-anim="left">
+          <h3>sloth-daemon</h3>
+          <p>Every Linux user has watched one runaway process eat the whole machine. The usual fix is to kill it. I wanted something gentler.</p>
+          <p>sloth-daemon watches CPU use through eBPF, asks a small local model running on Ollama what kind of process it is looking at, then slows it down with cgroup v2 instead of ending it. It&rsquo;s written in Rust with aya.</p>
+          <a class="arrow-link" href="https://github.com/mshkh-dev/sloth-daemon" target="_blank" rel="noopener">Read the code <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <figure class="scene-vis" data-anim="right">
+          <div class="term" id="cpu" role="img" aria-label="Illustration: one process spikes the CPU, then sloth-daemon slows it down instead of killing it">
+            <div class="term-top" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="bars" aria-hidden="true"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            <div class="log" aria-hidden="true"></div>
+          </div>
+          <figcaption>An illustration of the idea, not real output.</figcaption>
+        </figure>
+      </article>
+
+      <article class="scene flip">
+        <div class="scene-text" data-anim="right">
+          <h3>AcciVision-AI</h3>
+          <p>A camera watches the road, and a CNN+LSTM model watches the camera. The CNN reads each frame, the LSTM keeps track of what happens across frames, and when the sequence looks like an accident the system raises an alert on a Flask monitoring dashboard.</p>
+          <p>It&rsquo;s an end-to-end, real-time pipeline, from video in to alert out.</p>
+          <a class="arrow-link" href="https://github.com/mshkh-dev/AcciVision-AI" target="_blank" rel="noopener">Read the code <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <figure class="scene-vis" data-anim="left">
+          <div class="road" role="img" aria-label="Illustration: two cars meet at a crossroads, the model flags an accident and sends an alert">
+            <span class="car a"></span><span class="car b"></span>
+            <span class="det"><b>accident detected</b></span>
+            <span class="alert">alert sent to the dashboard</span>
+            <span class="scan"></span>
+            <span class="rec">live</span>
+          </div>
+          <figcaption>A cartoon of what the model is looking for.</figcaption>
+        </figure>
+      </article>
+
+      <article class="scene">
+        <div class="scene-text" data-anim="left">
+          <h3>Warehouse Robot Path Planning</h3>
+          <p>My third-year mini project asks a simple question: how should a robot cross a warehouse floor?</p>
+          <p>I implemented A*, Dijkstra and breadth-first search in Python and compared how each one explores the same floor. Watch them take turns on the right. The repository is on its way.</p>
+        </div>
+        <figure class="scene-vis" data-anim="right">
+          <div class="grid-card">
+            <canvas id="grid" role="img" aria-label="Animation of A*, Dijkstra and breadth-first search finding a path between shelves"></canvas>
+            <div class="grid-cap"><span class="algo" id="algo">A*</span><span class="count" id="count"></span></div>
+          </div>
+          <figcaption>A tiny replay of the idea, not the project&rsquo;s own code.</figcaption>
+        </figure>
+      </article>
+
+      <div class="gh">
+        <p class="gh-line" data-anim>Those are three of the bigger ones. <a class="arrow-link" href="https://github.com/mshkh-dev?tab=repositories" target="_blank" rel="noopener">The rest of my repositories are on GitHub <span aria-hidden="true">&rarr;</span></a></p>
+        <div class="gh-card" id="ghCard" data-anim="scale" hidden>
+          <div class="heat" id="heat" role="img" aria-label="GitHub contribution heatmap"></div>
+          <p class="gh-cap" id="ghCap"></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Where I'm headed -->
+  <section class="chap" id="next" aria-labelledby="next-h">
+    <div class="wrap">
+      <p class="kicker" data-anim>Where I&rsquo;m headed</p>
+      <h2 class="head wide" id="next-h" data-anim="rise">Data engineering and DataOps, with machine learning on top.</h2>
+      <p class="lead" data-anim>The plan is to build the plumbing data travels through, keep it reliable, and put models on top. Everything I read, build and write points that way.</p>
+
+      <div class="flow" data-anim="scale">
+        <div class="node"><b>Raw data</b><span>messy, and everywhere</span></div>
+        <i class="wire" aria-hidden="true"></i>
+        <div class="node"><b>Pipelines</b><span>moved and cleaned, reliably</span></div>
+        <i class="wire" aria-hidden="true"></i>
+        <div class="node"><b>Models</b><span>trained, then watched</span></div>
+        <i class="wire" aria-hidden="true"></i>
+        <div class="node"><b>Decisions</b><span>something useful comes out</span></div>
+      </div>
+
+      <h3 class="toolhead" data-anim>Tools I built my skills upon</h3>
+
+      <!-- To add a skill: copy one <li> line inside the right group and change the name.
+           Colours: c1 yellow, c2 orange, c3 aqua, c4 blue, c5 purple, c6 green.
+           To add a new group, copy a whole <div class="sg"> block. -->
+      <div class="skillgroups">
+        <div class="sg" data-anim>
+          <h4>Languages</h4>
+          <ul class="pills">
+            <li><span class="pill c1">Python</span></li>
+            <li><span class="pill c2">Rust</span></li>
+          </ul>
+        </div>
+        <div class="sg" data-anim style="--d:1">
+          <h4>Data &amp; ML</h4>
+          <ul class="pills">
+            <li><span class="pill c3">CNN+LSTM</span></li>
+            <li><span class="pill c4">Jupyter</span></li>
+            <li><span class="pill c5">Ollama</span></li>
+            <li><span class="pill c6">Flask</span></li>
+          </ul>
+        </div>
+        <div class="sg" data-anim style="--d:2">
+          <h4>Systems &amp; tooling</h4>
+          <ul class="pills">
+            <li><span class="pill c1">Linux</span></li>
+            <li><span class="pill c2">Arch</span></li>
+            <li><span class="pill c3">eBPF</span></li>
+            <li><span class="pill c4">aya</span></li>
+            <li><span class="pill c5">cgroup v2</span></li>
+            <li><span class="pill c6">Git</span></li>
+            <li><span class="pill c1">GitHub</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section class="chap" id="notes" aria-labelledby="notes-h">
+    <div class="wrap narrow">
+      <p class="kicker" data-anim>Things I write down</p>
+      <h2 class="head" id="notes-h" data-anim="rise">I blog about what I&rsquo;m learning.</h2>
+      <ul class="posts" id="posts">
+        <li class="posts-empty" data-anim>New posts are on the way.</li>
+      </ul>
+      <p class="more" id="blog-more" hidden><a class="arrow-link" id="blog-link" href="#" target="_blank" rel="noopener">All posts <span aria-hidden="true">&rarr;</span></a></p>
+    </div>
+  </section>
+
+  <!-- Say hello -->
+  <section class="chap" id="hello" aria-labelledby="hello-h">
+    <div class="wrap narrow">
+      <p class="kicker" data-anim>Say hello</p>
+      <h2 class="head" id="hello-h" data-anim="rise">If this sounds like your kind of problem, say hi.</h2>
+      <!-- The tiles are built by script.js from the CONFIG block at the top of that file. -->
+      <ul class="tiles" id="tiles">
+        <li><a class="tile c6" href="https://github.com/mshkh-dev" target="_blank" rel="noopener"><span class="tile-top"><span class="tile-name">GitHub</span></span><span class="tile-sub">github.com/mshkh-dev</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The short version: for anyone who skipped to the end. Also prints as a one-page r&eacute;sum&eacute;. -->
+  <section class="chap last" id="short" aria-labelledby="short-h">
+    <div class="wrap narrow">
+      <header class="print-only">
+        <p class="pn">Moeen</p>
+        <p>Computer engineering student &middot; data engineering, DataOps and ML</p>
+      </header>
+      <p class="kicker" data-anim>The short version</p>
+      <h2 class="head" id="short-h" data-anim="rise">Everything above, in thirty seconds.</h2>
+
+      <div class="tldr" data-anim="scale">
+        <div class="trow">
+          <h3>Who I am</h3>
+          <p>A third-year computer engineering student heading towards data engineering, DataOps and machine learning. Rust and ML hobbyist, regular blogger, Arch user.</p>
+        </div>
+        <div class="trow">
+          <h3>Where I studied</h3>
+          <p>B.E. in Computer Engineering at DY Patil College of Engineering and Innovation (current, third year). Diploma from Marathwada Mitramandal&rsquo;s Polytechnic.</p>
+        </div>
+        <div class="trow">
+          <h3>What I&rsquo;ve built</h3>
+          <p><b>sloth-daemon</b>, a Rust and eBPF CPU governor that throttles runaway processes with cgroup v2. <b>AcciVision-AI</b>, real-time accident detection with a CNN+LSTM and a Flask dashboard. <b>Warehouse Robot Path Planning</b>, a comparison of A*, Dijkstra and BFS in Python.</p>
+        </div>
+        <div class="trow">
+          <h3>What I work with</h3>
+          <p>Python, Rust, eBPF, aya, Linux, cgroup v2, Flask, Jupyter, Ollama, Git and GitHub.</p>
+        </div>
+        <div class="trow">
+          <h3>Find me</h3>
+          <p class="find" id="find"><a href="https://github.com/mshkh-dev" target="_blank" rel="noopener">github.com/mshkh-dev</a></p>
+        </div>
+        <div class="tldr-actions">
+          <a class="btn solid" id="resume" href="#" target="_blank" rel="noopener" hidden>Download the full r&eacute;sum&eacute;</a>
+          <button class="btn" id="print" type="button">Save this page as a PDF</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Built by hand with plain HTML, CSS and a little JavaScript. Set in Liberation Serif.</p>
+    <a href="#top">Back to the start <span aria-hidden="true">&uarr;</span></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
